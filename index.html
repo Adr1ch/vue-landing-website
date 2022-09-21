@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./base.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="application">
+      <intersection-observer :ref-id="'909a15bc-fadd-482c-8d1d-1380cbb45f00'">
+        <baner-component></baner-component>
+      </intersection-observer>
+      <intersection-observer :ref-id="'4315a290-c0b3-40cc-9e36-85d7e3c5ce44'">
+        <section style="height: 2500px">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+          assumenda fuga molestiae et at. Reprehenderit aliquid pariatur
+          quisquam suscipit quidem repellendus, recusandae aperiam
+          necessitatibus mollitia doloribus accusantium nesciunt est ab quo
+          rerum nemo, ex commodi molestiae, culpa vitae reiciendis excepturi qui
+          id? Corrupti unde quaerat corporis placeat sint ex dolore.
+        </section>
+      </intersection-observer>
+      <intersection-observer :ref-id="'1ff00eda-7bda-4033-a5a9-a56b7d733c81'">
+        <section style="height: 2500px">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+          assumenda fuga molestiae et at. Reprehenderit aliquid pariatur
+          quisquam suscipit quidem repellendus, recusandae aperiam
+          necessitatibus mollitia doloribus accusantium nesciunt est ab quo
+          rerum nemo, ex commodi molestiae, culpa vitae reiciendis excepturi qui
+          id? Corrupti unde quaerat corporis placeat sint ex dolore.
+        </section>
+      </intersection-observer>
+    </div>
+
+    <script type="module">
+      import { createApp } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
+      import BanerComponent from "./baner.js";
+      import IntersectionObserverComponent from "./intersection-observer.js";
+      createApp({
+        components: {
+          "baner-component": BanerComponent,
+          "intersection-observer": IntersectionObserverComponent
+        },
+        data() {
+          return {
+            message: "Hello Vue!"
+          };
+        }
+      }).mount("#application");
+    </script>
+  </body>
+</html>
